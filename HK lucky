@@ -1,0 +1,19 @@
+#!/bin/env python3
+
+import os, sys
+sys.path.append(os.getcwd()+"/.lib/")
+import argparse
+from api import *
+
+ap = argparse.ArgumentParser()
+ap.add_argument("-u", "--user", required=True, help=">
+ap.add_argument("-p", "--password", action="store_tru>
+args = vars(ap.parse_args())
+
+os.system("clear")
+
+if args['user']:
+        user_info(usrname=args["user"])
+
+if args['password']:
+        password_info()
